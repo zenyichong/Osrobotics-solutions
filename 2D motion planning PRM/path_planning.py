@@ -8,9 +8,9 @@ sys.path.append('osr_examples/scripts/')
 import environment_2d
 
 
-NUM_NODES = 350    # 350
-MAX_NEIGHBOURS = 8  # 10
-RADIUS = 2     # 2
+NUM_NODES = 350    
+MAX_NEIGHBOURS = 8  
+RADIUS = 2    
 
 
 def main():
@@ -31,7 +31,7 @@ def main():
     graph.plot_nodes()
     graph.plot_edges()
     graph.plot_path(path)
-    # pl.savefig(f'random_seed_{i}.png', bbox_inches='tight')
+    # pl.savefig(f'random_seed_n.png', bbox_inches='tight')
 
 
 if __name__ == '__main__':
