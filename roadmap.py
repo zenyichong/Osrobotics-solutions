@@ -26,7 +26,7 @@ class PRM:
     def random_sampling(self):
         """
         Takes n random samples within the configuration space
-        and assigns them as nodes if they are in Cfree
+        and assigns them as valid nodes if they are in Cfree.
         """
         n = 0
         while n < self.num_nodes:
@@ -38,8 +38,8 @@ class PRM:
 
     def find_closest_neighbours(self):
         """
-        Finds the a maximum of k closest neighbours of each node
-        and sorts them according to their euclidean distance.
+        Finds a maximum of k closest neighbours for each node and
+        sorts them according to their euclidean distance.
         """
         for node in self.nodes:
             distances = []
@@ -85,7 +85,7 @@ class PRM:
         """
         Helper function:
         Uses Dijkstra's algorithm to find the shortest path
-        (not considering start and end nodes).
+        (not considering start and goal nodes).
         """
         distance = [float('Inf')] * self.num_nodes
         parent = [-1] * self.num_nodes
